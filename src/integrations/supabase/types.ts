@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bgmi_id: string | null
+          created_at: string
+          id: string
+          ign: string | null
+          squad_name: string | null
+          updated_at: string
+          user_id: string
+          whatsapp: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bgmi_id?: string | null
+          created_at?: string
+          id?: string
+          ign?: string | null
+          squad_name?: string | null
+          updated_at?: string
+          user_id: string
+          whatsapp?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bgmi_id?: string | null
+          created_at?: string
+          id?: string
+          ign?: string | null
+          squad_name?: string | null
+          updated_at?: string
+          user_id?: string
+          whatsapp?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
