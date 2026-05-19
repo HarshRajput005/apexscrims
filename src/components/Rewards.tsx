@@ -2,10 +2,10 @@ import { SectionHeader } from "./Matches";
 import { Crosshair, Trophy, Medal, Star } from "lucide-react";
 
 const rewards = [
-  { pos: "WWCD", prize: "₹5,000 - ₹15,000", icon: <Trophy className="h-6 w-6" />, desc: "Winner Winner Chicken Dinner. Top squad takes the lion's share." },
-  { pos: "2nd Place", prize: "₹2,500 - ₹7,000", icon: <Medal className="h-6 w-6" />, desc: "Runner-up squads earn a strong slice of the pool." },
-  { pos: "3rd Place", prize: "₹1,500 - ₹4,000", icon: <Star className="h-6 w-6" />, desc: "Podium finish. Glory plus payout." },
-  { pos: "Per Kill", prize: "₹40 - ₹100", icon: <Crosshair className="h-6 w-6" />, desc: "Every elimination credits your wallet instantly post-match." },
+  { pos: "WWCD", prize: "₹600", icon: <Trophy className="h-6 w-6" />, desc: "Winner Winner Chicken Dinner. Top squad takes the prize pool." },
+  { pos: "2nd Place", prize: "₹200", icon: <Medal className="h-6 w-6" />, desc: "Runner-up squad earns a guaranteed payout." },
+  { pos: "Entry Fee", prize: "₹25 / player", icon: <Star className="h-6 w-6" />, desc: "Flat entry per operator. Squad locks in for ₹100." },
+  { pos: "Per Kill", prize: "₹10", icon: <Crosshair className="h-6 w-6" />, desc: "Every elimination credits your wallet instantly post-match." },
 ];
 
 export function Rewards() {

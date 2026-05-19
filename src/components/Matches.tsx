@@ -1,12 +1,12 @@
 import { Calendar, Clock, Users, Coins, Trophy } from "lucide-react";
 
 const matches = [
-  { id: "SC-101", title: "Erangel Royale", map: "Erangel", mode: "Squad TPP", date: "May 22", time: "21:00", fee: 150, slots: 25, filled: 18, prize: 8000, perKill: 50 },
-  { id: "SC-102", title: "Miramar Mayhem", map: "Miramar", mode: "Squad FPP", date: "May 23", time: "20:30", fee: 200, slots: 25, filled: 22, prize: 12000, perKill: 75 },
-  { id: "SC-103", title: "Sanhok Sniper Showdown", map: "Sanhok", mode: "Sniper Only", date: "May 24", time: "22:00", fee: 100, slots: 16, filled: 9, prize: 5000, perKill: 100 },
-  { id: "SC-104", title: "Livik Lightning", map: "Livik", mode: "Squad TPP", date: "May 25", time: "19:00", fee: 120, slots: 20, filled: 14, prize: 6500, perKill: 60 },
-  { id: "SC-105", title: "Vikendi Night Ops", map: "Vikendi", mode: "Squad FPP", date: "May 26", time: "23:00", fee: 250, slots: 25, filled: 25, prize: 15000, perKill: 80 },
-  { id: "SC-106", title: "TDM Frag Frenzy", map: "Warehouse", mode: "TDM 4v4", date: "May 27", time: "21:30", fee: 80, slots: 32, filled: 12, prize: 4000, perKill: 40 },
+  { id: "SC-101", title: "Erangel Royale", map: "Erangel", mode: "Squad TPP", date: "May 22", time: "21:00", fee: 25, slots: 25, filled: 18, prize: 600, perKill: 10 },
+  { id: "SC-102", title: "Miramar Mayhem", map: "Miramar", mode: "Squad FPP", date: "May 23", time: "20:30", fee: 25, slots: 25, filled: 22, prize: 600, perKill: 10 },
+  { id: "SC-103", title: "Sanhok Sniper Showdown", map: "Sanhok", mode: "Sniper Only", date: "May 24", time: "22:00", fee: 25, slots: 16, filled: 9, prize: 600, perKill: 10 },
+  { id: "SC-104", title: "Livik Lightning", map: "Livik", mode: "Squad TPP", date: "May 25", time: "19:00", fee: 25, slots: 20, filled: 14, prize: 600, perKill: 10 },
+  { id: "SC-105", title: "Vikendi Night Ops", map: "Vikendi", mode: "Squad FPP", date: "May 26", time: "23:00", fee: 25, slots: 25, filled: 25, prize: 600, perKill: 10 },
+  { id: "SC-106", title: "TDM Frag Frenzy", map: "Warehouse", mode: "TDM 4v4", date: "May 27", time: "21:30", fee: 25, slots: 32, filled: 12, prize: 600, perKill: 10 },
 ];
 
 export function Matches() {

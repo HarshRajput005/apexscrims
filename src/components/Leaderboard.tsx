@@ -1,16 +1,7 @@
 import { SectionHeader } from "./Matches";
 import { Crown, Skull, Award } from "lucide-react";
 
-const players = [
-  { rank: 1, name: "GHOST·SNIPER", team: "TX Wolves", kills: 412, wwcd: 18, earnings: 84500 },
-  { rank: 2, name: "VENOM_X", team: "Hydra Esports", kills: 387, wwcd: 14, earnings: 71200 },
-  { rank: 3, name: "PHANTOM₁", team: "Soul Mortal", kills: 365, wwcd: 12, earnings: 62800 },
-  { rank: 4, name: "REAPER·77", team: "Godlike", kills: 341, wwcd: 11, earnings: 55400 },
-  { rank: 5, name: "BLAZE_OP", team: "Team XO", kills: 318, wwcd: 9, earnings: 47100 },
-  { rank: 6, name: "JOKER·404", team: "Revenant", kills: 296, wwcd: 8, earnings: 39800 },
-  { rank: 7, name: "SHADOW_K", team: "Orange Rock", kills: 274, wwcd: 7, earnings: 33500 },
-  { rank: 8, name: "TITAN·X", team: "Velocity", kills: 258, wwcd: 6, earnings: 28900 },
-];
+const players: { rank: number; name: string; team: string; kills: number; wwcd: number; earnings: number }[] = [];
 
 const rankIcon = (r: number) => r === 1 ? <Crown className="h-4 w-4" /> : r === 2 ? <Award className="h-4 w-4" /> : r === 3 ? <Skull className="h-4 w-4" /> : null;
 
@@ -30,19 +21,31 @@ export function Leaderboard() {
             <div className="col-span-1 text-right">WWCD</div>
             <div className="col-span-2 text-right">Earnings</div>
           </div>
-          {players.map((p) => (
-            <div key={p.rank} className={`grid grid-cols-2 md:grid-cols-12 gap-4 px-6 py-4 items-center border-b border-border/50 last:border-0 hover:bg-[var(--neon)]/5 transition group ${p.rank <= 3 ? "bg-[var(--neon)]/[0.03]" : ""}`}>
-              <div className="md:col-span-1 flex items-center gap-2">
-                <span className={`font-display font-black text-xl ${p.rank <= 3 ? "text-neon" : "text-muted-foreground"}`}>#{p.rank}</span>
-                <span className="text-neon">{rankIcon(p.rank)}</span>
+          {players.length === 0 ? (
+            <div className="px-6 py-20 text-center">
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-neon">
+                <span className="h-2 w-2 rounded-full bg-[var(--neon)] animate-pulse" /> Season Reset
               </div>
-              <div className="md:col-span-4 font-display font-bold tracking-wider">{p.name}</div>
-              <div className="md:col-span-3 text-sm text-muted-foreground">{p.team}</div>
-              <div className="md:col-span-1 text-right font-display font-bold">{p.kills}</div>
-              <div className="md:col-span-1 text-right font-display font-bold">{p.wwcd}</div>
-              <div className="md:col-span-2 text-right font-display font-black text-neon">₹{p.earnings.toLocaleString()}</div>
+              <h3 className="mt-4 font-display text-3xl font-black uppercase">Killboard Cleared</h3>
+              <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
+                A new season has begun. Drop into the next scrim and stamp your name at the top.
+              </p>
             </div>
-          ))}
+          ) : (
+            players.map((p) => (
+              <div key={p.rank} className={`grid grid-cols-2 md:grid-cols-12 gap-4 px-6 py-4 items-center border-b border-border/50 last:border-0 hover:bg-[var(--neon)]/5 transition group ${p.rank <= 3 ? "bg-[var(--neon)]/[0.03]" : ""}`}>
+                <div className="md:col-span-1 flex items-center gap-2">
+                  <span className={`font-display font-black text-xl ${p.rank <= 3 ? "text-neon" : "text-muted-foreground"}`}>#{p.rank}</span>
+                  <span className="text-neon">{rankIcon(p.rank)}</span>
+                </div>
+                <div className="md:col-span-4 font-display font-bold tracking-wider">{p.name}</div>
+                <div className="md:col-span-3 text-sm text-muted-foreground">{p.team}</div>
+                <div className="md:col-span-1 text-right font-display font-bold">{p.kills}</div>
+                <div className="md:col-span-1 text-right font-display font-bold">{p.wwcd}</div>
+                <div className="md:col-span-2 text-right font-display font-black text-neon">₹{p.earnings.toLocaleString()}</div>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </section>
