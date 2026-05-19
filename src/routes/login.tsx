@@ -42,11 +42,12 @@ function LoginPage() {
           password,
           options: {
             emailRedirectTo: `${window.location.origin}/`,
-            data: { ign },
+            data: { ign, bgmi_id: bgmiId, whatsapp, squad_name: squadName },
           },
         });
         if (error) throw error;
-        toast.success("Squad enlisted. Check your email to verify.");
+        toast.success("Squad enlisted. Check your email to verify, then sign in.");
+        setMode("login");
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
