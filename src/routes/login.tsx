@@ -21,6 +21,9 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [ign, setIgn] = useState("");
+  const [bgmiId, setBgmiId] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [squadName, setSquadName] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
