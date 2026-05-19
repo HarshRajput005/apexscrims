@@ -1,26 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Matches } from "@/components/Matches";
+import { Leaderboard } from "@/components/Leaderboard";
+import { Rewards } from "@/components/Rewards";
+import { Register } from "@/components/Register";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "ApexScrims — Premium BGMI Esports Tournaments & Paid Scrims" },
+      { name: "description", content: "Host-scheduled BGMI paid scrims with per-kill payouts, position prize pools, and instant rewards. Join India's elite esports circuit." },
+      { property: "og:title", content: "ApexScrims — BGMI Esports Tournaments" },
+      { property: "og:description", content: "Premium paid BGMI scrims with real cash rewards per kill and position." },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative min-h-screen">
+      <Navbar />
+      <Hero />
+      <Matches />
+      <Leaderboard />
+      <Rewards />
+      <Register />
+      <Footer />
+      <Toaster theme="dark" />
+    </main>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
