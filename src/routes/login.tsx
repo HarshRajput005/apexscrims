@@ -133,9 +133,20 @@ function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {mode === "signup" && (
-              <Field icon={<User className="h-4 w-4" />} label="IGN">
-                <input required value={ign} onChange={(e) => setIgn(e.target.value)} placeholder="GHOST_SNIPER" className="input-neon" />
-              </Field>
+              <>
+                <Field icon={<User className="h-4 w-4" />} label="IGN">
+                  <input required value={ign} onChange={(e) => setIgn(e.target.value)} placeholder="GHOST_SNIPER" className="input-neon" />
+                </Field>
+                <Field icon={<User className="h-4 w-4" />} label="BGMI ID">
+                  <input required value={bgmiId} onChange={(e) => setBgmiId(e.target.value)} placeholder="5XXXXXXXXX" className="input-neon" />
+                </Field>
+                <Field icon={<User className="h-4 w-4" />} label="WhatsApp">
+                  <input required value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} placeholder="+91 9XXXXXXXXX" className="input-neon" />
+                </Field>
+                <Field icon={<User className="h-4 w-4" />} label="Squad Name">
+                  <input required value={squadName} onChange={(e) => setSquadName(e.target.value)} placeholder="TX·Wolves" className="input-neon" />
+                </Field>
+              </>
             )}
             <Field icon={<Mail className="h-4 w-4" />} label="Email">
               <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="player@apex.gg" className="input-neon" />
