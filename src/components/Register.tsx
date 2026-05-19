@@ -34,10 +34,10 @@ export function Register() {
           <div>
             <label className="text-xs font-bold uppercase tracking-widest text-neon">Select Match</label>
             <select className="mt-2 w-full bg-input border border-border clip-corner px-4 py-3 font-sans focus:border-[var(--neon)] outline-none">
-              <option>SC-101 • Erangel Royale • ₹150</option>
-              <option>SC-102 • Miramar Mayhem • ₹200</option>
-              <option>SC-103 • Sanhok Sniper • ₹100</option>
-              <option>SC-104 • Livik Lightning • ₹120</option>
+              <option>SC-101 • Erangel Royale • ₹25/player</option>
+              <option>SC-102 • Miramar Mayhem • ₹25/player</option>
+              <option>SC-103 • Sanhok Sniper • ₹25/player</option>
+              <option>SC-104 • Livik Lightning • ₹25/player</option>
             </select>
           </div>
           <button disabled={loading} className="w-full clip-corner gradient-red py-4 font-display font-black uppercase tracking-widest text-white animate-pulse-glow disabled:opacity-60">

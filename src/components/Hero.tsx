@@ -53,11 +53,11 @@ export function Hero() {
         <div className="hidden lg:flex absolute right-10 top-32 flex-col gap-4 animate-float">
           <div className="clip-corner bg-card/80 border-neon p-4 w-56 backdrop-blur">
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-neon"><Crosshair className="h-3 w-3" /> Per Kill</div>
-            <div className="font-display text-3xl font-black mt-1">₹50</div>
+            <div className="font-display text-3xl font-black mt-1">₹10</div>
           </div>
           <div className="clip-corner bg-card/80 border-neon p-4 w-56 backdrop-blur">
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-neon"><Trophy className="h-3 w-3" /> WWCD</div>
-            <div className="font-display text-3xl font-black mt-1">₹5,000</div>
+            <div className="font-display text-3xl font-black mt-1">₹600</div>
           </div>
         </div>
       </div>
