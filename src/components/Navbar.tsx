@@ -32,10 +32,13 @@ export function Navbar() {
         </nav>
         {session ? (
           <div className="flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-2 clip-corner border border-border px-3 py-2 text-xs">
+            <Link
+              to="/dashboard"
+              className="hidden sm:inline-flex items-center gap-2 clip-corner border border-border px-3 py-2 text-xs hover:border-[var(--neon)] transition"
+            >
               <User className="h-3.5 w-3.5 text-neon" />
               <span className="font-bold truncate max-w-[140px]">{session.user.email}</span>
-            </div>
+            </Link>
             <button
               onClick={() => supabase.auth.signOut()}
               className="inline-flex items-center gap-2 clip-corner border-neon px-4 py-2 text-xs font-bold uppercase tracking-wider text-neon hover:bg-[var(--neon)]/10 transition"
